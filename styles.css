@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(135deg, #151b25, #101419, #0d0e11);
+  background-color: #151b25;
+  background-image: radial-gradient(#000000 0%, #151b25 80%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem;
+}
+
+.title h1{
+  margin-top: 1rem;
+  color: white;
+}
+
+.listado {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+  gap: 2rem;
+}
+
+.champ {
+  position: relative;  
+  border-radius: 20px;
+  box-shadow: 0px 3px 15px rgba(100, 100, 100, 0.5);
+  text-align: center;
+  background-size: contain;
+  background-position: center;
+  border: 2px solid #ffd700;
+  
+}
+
+
+.champ:before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  border-radius: 25px;
+  border: 2px solid #ffffff; /* Color de borde blanco */
+  background: linear-gradient(45deg, #151b25, #101419); /* Degradado de fondo */
+  z-index: -1;
+}
+
+.champ:hover {
+  transform: scale(1.05);
+  transition: 0.5s;
+}
+
+.champ .img-container {
+  text-align: center;
+  height: 350px;
+  width: 470px;
+  position: relative;
+  overflow: hidden;  
+}
+.champ .img-container img {
+  width: 100%;
+  height: 100%;  
+  border-radius: 20px;
+  transition: opacity 0.3s ease-in-out; 
+  transition: transform 0.3s ease-in-out;
+  /* transition: filter 0.3s ease-in-out;  */
+}
+.champ .img-container:hover img {
+  transform: scale(1.1); 
+}
+
+.champ .img-container:hover img{
+  opacity: 0.6; 
+}
+/* .champ .img-container img:hover {
+  filter: grayscale(100%);
+} */
+
+.champ .info {  
+  width: 100%;
+  z-index: 2;
+  position: absolute;  
+  color: #fff;
+  padding: 1rem;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.champ .number {
+  background-color: rgba(0, 0, 0, 0.1);  
+  font-size: 0.8em;
+  padding: 5px 10px;
+}
+
+.champ .name {
+  margin: 15px 0 7px;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+}
+
+.grow {
+  transition: all 0.2s ease-in-out;
+}
+.grow:hover {
+  transform: scale(1.05);
+}
