@@ -1,15 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Friz+Quadrata&display=swap');
+
+
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body {
+body{
+  font-family: sans-serif;
+
+}
+
+body,
+.container {
   background: linear-gradient(135deg, #151b25, #101419, #0d0e11);
   background-color: #151b25;
   background-image: radial-gradient(#000000 0%, #151b25 80%);
   background-repeat: no-repeat;
   background-attachment: fixed;
+}
+
+a{
+  cursor: pointer;
+}
+
+ul li{
+  list-style: none;
 }
 
 .title {
@@ -116,4 +134,37 @@ body {
 }
 .grow:hover {
   transform: scale(1.05);
+}
+
+.champion-details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem;
+}
+
+.champion-image img {
+  width: 600px;
+  height: 400px;
+  
+}
+
+.champion-info {
+  margin-left: 2rem;
+}
+
+.champion-info h1,
+.champion-info h2,
+.champion-info h3,
+.champion-info p {
+  color: #cecccc;  
+}
+
+#champion-abilities {
+  margin-top: 1rem;
+}
+
+#champion-abilities li {
+  color: #cecccc;
+  margin-bottom: .7rem;
 }
